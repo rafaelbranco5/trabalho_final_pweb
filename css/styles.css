@@ -1,0 +1,29 @@
+*{
+	top: 0;
+	left: 0;
+}
+body{
+	margin-left: 2px;
+	width: 100%;
+	margin-top: 2px;
+	background-color: rgba(0,51,153,.9);
+}
+#logo{
+	float: left;
+}
+#menu{
+	margin-top: 10px;
+	float: right;
+	height: 10px;
+}
+ul li{
+	list-style-type: none;
+	float: left;
+	width: 175px;
+}
+ul li a{
+	text-decoration: none;
+	font-size: 25;
+	font-weight: bold;
+	color: white;
+}
