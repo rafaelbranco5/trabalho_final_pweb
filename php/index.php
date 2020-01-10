@@ -21,3 +21,8 @@
 		include '../php/carrousel.php';
 	?>
 </div>
+<div id="footer">
+	<?php
+		include '../html/footer.html';
+	?>
+</div>
