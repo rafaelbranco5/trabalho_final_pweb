@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Vollkorn&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Vollkorn', serif;
+  color: #666;
+}
+
+.wrapper {
+  padding: 5px;
+  max-width: 960px;
+  width: 95%;
+  margin: 20px auto;
+}
+
+header {
+  padding: 0 15px;
+}
+
+.texto {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.coluna {
+  flex: 1;
+  border: 1px solid gray;
+  margin: 2px;
+  padding: 10px;
+}
+.coluna:first-child {
+  margin-left: 0;
+}
+.coluna:last-child {
+  margin-right: 0;
+}
+
+footer {
+  padding: 0 15px;
+}
+@media screen and (max-width: 980px) {
+  .texto .coluna {
+    margin-bottom: 5px;
+    flex-basis: 40%;
+  }
+  .texto .coluna:nth-last-child(2) {
+    margin-right: 0;
+  }
+  .texto .coluna:last-child {
+    flex-basis: 100%;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 680px) {
+  .texto .coluna {
+    flex-basis: 100%;
+    margin: 0 0 5px 0;
+  }
+}
