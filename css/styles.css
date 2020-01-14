@@ -49,7 +49,7 @@ ul li a{
 .info a{
 	text-decoration: none;
 	color: white;
-	font-size: 10;
+	font-size: 15;
 }
 #certificacao{
 	margin-top: 20px;
@@ -66,9 +66,10 @@ ul li a{
 #info-contactos h2{
 	font-size: 50px;
 	color: rgb(51,108,204);
+	text-align: center;
 }
 #info-contactos p{
 	font-size: 20px;
 	color: black;
-	margin-left: 5em;
+	text-align: center;
 }

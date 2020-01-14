@@ -1,24 +1,47 @@
 <link rel="stylesheet" type="text/css" href="../css/styles.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
 
 <div id="cabecalho">
 	<?php
-		/*
-			Condiçaõ que verifica quando o utilizador entra na página se tem sessão iniciada ou não
-			Se tiver sessão iniciada inclui o topo/header com a opção "A Minha Área"
-			se não tiver sessão iniciada inclui o topo/header geral.
-		*/
-		session_start();
-		if (!isset($_SESSION['user'])) {
-			include '../html/topo_geral.html';
-		} else {
-			include '../html/topo_sessao_iniciada.html';
-		}
+		include '../php/header.php';
 	?>
 </div>
-<div id="carrosel">
+<div id="corpo">
 	<?php
-		include '../php/carrousel.php';
+		if (!isset($_GET['page'])) {
+			include '../php/carrousel.php';
+		}else{
+			switch ($_GET['page']) {
+				case 1:
+					include '../php/carrousel.php';
+					break;
+				case 2: //TODO loja.php
+					include '';
+					break;
+				case 3: //TODO equipas.php
+					include '';
+					break;
+				case 4:	//TODO jogos.php
+					include '';
+					break;
+				case 5:
+					include '../php/contactos.php';
+					break;
+				case 6: //TODO area_utilizador.php
+					include '';
+					break;
+				case 7: //TODO aboutus.php
+					include '';
+					break;
+				case 8: //TODO ? login
+					include '';
+					break;
+				default:
+					include '../php/carrousel.php';
+					break;
+			}
+		}
 	?>
 </div>
 <div id="footer">
