@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
 <script type="text/javascript">
   var posicao=0;
   var array_imagens = [];
@@ -21,7 +22,7 @@
 </script>
 
 <body onload="autoslide()">
-  <div>
+  <div id="carrosel">
     <img src="" id="img" style="width: 100%">
   </div>
 </body>
