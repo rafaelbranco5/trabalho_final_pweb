@@ -1,0 +1,40 @@
+*{
+	top: 0;
+	left: 0;
+}
+body{
+	margin-left: 2px;
+	margin-top: 2px;
+	width: 100%;
+}
+#area_utilizador{
+	text-align: center;
+	width: 500px;
+	height: 600px;
+	background-color: rgb(51,102,204);
+	margin-left: 35%;
+}
+#titulo h1{
+	font-size: 70px;
+	color: white;
+	text-align: center;
+	margin-top: 2px;
+}
+input[type=text], [type=password], [type=email]{
+	border-radius: 2px;
+	height: 35px;
+	margin-top: 10px;
+	width: 300px;
+}
+input[type=submit]{
+	border-radius: 2px;
+	margin-top: 20px;
+	width: 100px;
+	height: 25px;
+	border-radius: 5px;
+	background-color: rgb(102,153,255);	
+}
+#volta p{
+	margin-top: 5px;
+	color: white;
+}

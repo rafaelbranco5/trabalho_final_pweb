@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="../css/styles.css">
+<link rel="stylesheet" type="text/css" href="../css/login.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
 
@@ -34,8 +35,11 @@
 				case 7: //TODO aboutus.php
 					include '';
 					break;
-				case 8: //TODO ? login
-					include '';
+				case 8:
+					include '../html/login_utilizador_existente.html';
+					break;
+				case 9:
+					include '../html/login_novo_utilizador.html';
 					break;
 				default:
 					include '../php/carrousel.php';
