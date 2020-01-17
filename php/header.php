@@ -20,7 +20,12 @@
 					<?php }
 				?>
 				<li><a href="?page=7">Sobre Nós</a></li>
-				<li><a href="?page=8">Log In</a></li>
+				<?php
+					if (isset($_SESSION['user'])) { ?>
+						<li><a href="../php/logout.php">Log Out</a></li>
+			<?php	} else { ?>
+						<li><a href="?page=8">Log In</a></li>
+			<?php	} ?>
 			</ul>
 		</nav>
 	</div>
