@@ -29,8 +29,8 @@
 				case 5:
 					include '../php/contactos.php';
 					break;
-				case 6: //TODO area_utilizador.php
-					include '';
+				case 6: 
+					include '../php/area_pessoal_utilizador.php';
 					break;
 				case 7: //TODO aboutus.php
 					include '';

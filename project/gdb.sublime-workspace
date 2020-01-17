@@ -183,7 +183,7 @@
 			"file": "/C/xampp/htdocs/gdbenavente/php/header.php",
 			"settings":
 			{
-				"buffer_size": 654,
+				"buffer_size": 796,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -201,7 +201,7 @@
 			"file": "/C/xampp/htdocs/gdbenavente/html/login_utilizador_existente.html",
 			"settings":
 			{
-				"buffer_size": 645,
+				"buffer_size": 668,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -210,7 +210,7 @@
 			"file": "/C/xampp/htdocs/gdbenavente/html/login_novo_utilizador.html",
 			"settings":
 			{
-				"buffer_size": 1071,
+				"buffer_size": 1096,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -219,7 +219,7 @@
 			"file": "/C/xampp/htdocs/gdbenavente/php/valida_login.php",
 			"settings":
 			{
-				"buffer_size": 219,
+				"buffer_size": 532,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -359,7 +359,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 654,
+						"buffer_size": 796,
 						"regions":
 						{
 						},
@@ -417,7 +417,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 645,
+						"buffer_size": 668,
 						"regions":
 						{
 						},
@@ -446,7 +446,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1071,
+						"buffer_size": 1096,
 						"regions":
 						{
 						},
@@ -475,15 +475,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 219,
+						"buffer_size": 532,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								216,
-								216
+								218,
+								218
 							]
 						],
 						"settings":
