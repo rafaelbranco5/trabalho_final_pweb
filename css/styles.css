@@ -73,3 +73,25 @@ ul li a{
 	color: black;
 	text-align: center;
 }
+#corpoprodutos{
+	margin-top: 2px;
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 80%;
+}
+.produto{
+	background-color: rgba(51,108,204,.7);
+	width: 31%;
+	float: left;
+	padding: 10px;
+	margin-bottom: 2px;
+	margin-right: 2%;
+	border-radius: 5px;
+}
+.produto h4{
+	text-align: left;
+}
+.produto h5{
+	text-align: right;
+	margin-right: 5px;
+}
