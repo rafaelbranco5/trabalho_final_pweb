@@ -1,4 +1,8 @@
 <meta charset="utf-8">
+<<<<<<< HEAD
+=======
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+>>>>>>> master
 <body>
 <div>
 	<div id="logo">
@@ -19,7 +23,16 @@
 					<?php }
 				?>
 				<li><a href="?page=7">Sobre Nós</a></li>
+<<<<<<< HEAD
 				<li><a href="?page=8">Log In</a></li>
+=======
+				<?php
+					if (isset($_SESSION['user'])) { ?>
+						<li><a href="../php/logout.php">Log Out</a></li>
+			<?php	} else { ?>
+						<li><a href="?page=8">Log In</a></li>
+			<?php	} ?>
+>>>>>>> master
 			</ul>
 		</nav>
 	</div>

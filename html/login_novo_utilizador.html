@@ -5,24 +5,24 @@
 	<title></title>
 </head>
 <body>
-	<div id="area_novo_utilizador">
+	<div id="area_utilizador">
 		<div id="titulo">
-			<h1>Registo de novos utilizadores</h1>
+			<h1>Registo de novo utilizador</h1>
 		</div>
 		<!--
 			Formulário que pede os dados necessáios para criar um novo utilizador na tabela user.
 			Quaisquer outros dados necessários para completar a tabela cliente são preenchidos pelo utilizador na sua área restrita.
 		-->
-		<form method="Post" action="">
+		<form method="Post" action="../php/valida_registo.php">
 			<input type="text" name="nome_completo" placeholder="Insira o seu nome"><br>
 			<input type="text" name="nome_utilizador" placeholder="Insira o seu nome de utilizador"><br>
 			<input type="email" name="email" placeholder="Insira o seu e-mail"><br>
 			<input type="password" name="primeira_pass" placeholder="Insira uma password"><br>
-			<input type="password" name="segunda_pass" placeholder="Confirme a sua passwo"><br>
+			<input type="password" name="segunda_pass" placeholder="Confirme a sua password"><br>
 			<input type="submit" name="registrar" value="Fazer Registo!">
 		</form>
-		<div id="volta_login">
-			<p>Já tem conta? Faça <a href="">aqui</a> o seu log in!</p>
+		<div id="volta">
+			<p>Já tem conta? Faça <a href="../php/index.php?page=8">aqui</a> o seu log in!</p>
 		</div>
 	</div>
 </body>
