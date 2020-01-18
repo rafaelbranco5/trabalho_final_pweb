@@ -1,1 +1,3 @@
-$liga = mysqli_connect("127.0.0.1","root","","Bena");
+<?php
+    $liga = mysqli_connect("127.0.0.1","root","","Bena");
+?>
