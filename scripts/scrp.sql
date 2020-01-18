@@ -83,3 +83,16 @@ CREATE TABLE Treino (
                 n_balizas INT(5) DEFAULT 2 NOT NULL,
                 n_coletes INT(5) NOT NULL
 );
+
+CREATE TABLE Users (
+                id_user INT AUTO_INCREMENT PRIMARY KEY ,
+                username VARCHAR(15),
+                nome VARCHAR(254),
+                email VARCHAR(254),
+                password VARCHAR(254),
+                admin BIT DEFAULT 0
+);
+
+-insert user admin
+
+insert into Users (username,nome,email,password,admin) values('admin','Administrador','admin@admin.pt', SHA1('Administrador'),1)
