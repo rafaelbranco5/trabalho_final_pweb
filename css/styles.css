@@ -100,29 +100,18 @@ ul li a{
 	height: 500px;
 	margin: auto;
 }
-#aufcol {
-  width: 49%;
-  height: 500px;
-  float: left;
-}
-#auscol {
-	width: 49%;
-	margin-left: 2%;
-	float: left;
-  height: 500px;
-}
 #campcam{
 	height: 400px;
 }
 #camposol{
 	height: 400px;
 }
-#titleaboutus{
-	font-size: 50px;
+.titleaboutus{
+	font-size: 30px;
 	color: rgb(51,108,204);
 	text-align: center;
 }
-#aboutus{
+.aboutus{
 	font-size: 20px;
 	color: black;
 	text-align: center;
