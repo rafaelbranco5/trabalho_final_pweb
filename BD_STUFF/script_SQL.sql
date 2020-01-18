@@ -19,6 +19,7 @@ CREATE TABLE Jogador (
 
 CREATE TABLE Equipa (
                 id_equipa INT(5) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+                nome VARCHAR(254),
                 total_jogos INT(5) DEFAULT 0 NOT NULL,
                 total_treinos INT(5) DEFAULT 0 NOT NULL,
                 n_golos_marcados INT(5) DEFAULT 0 NOT NULL,
@@ -96,4 +97,22 @@ CREATE TABLE Users (
 
 -insert user admin
 
-insert into Users (username,nome,email,password,admin,treinador) values('admin','Administrador','admin@admin.pt', SHA1('Administrador'),1,1)
+insert into Users (username,nome,email,password,admin,treinador) values('admin','admin','admin@admin.pt', SHA1('Administrador'),1,1)
+
+--insert equipas
+insert into Equipa (nome) values ('Benavente');
+insert into Equipa (nome) values ('Santarém');
+insert into Equipa (nome) values ('Cartaxo');
+
+--insert jogadores
+insert into Jogador(id_equipa, nome, numero_camisola, data_nascimento) values (1,'Raul Iglesias',1,'19900527');
+insert into Jogador(id_equipa, nome, numero_camisola, data_nascimento) values (1,'Jacinto a bola nos pes',3,'19980720');
+insert into Jogador(id_equipa, nome, numero_camisola, data_nascimento) values (1,'Eder le dieu',7,'20000501');
+insert into Jogador(id_equipa, nome, numero_camisola, data_nascimento) values (2,'Rafael Lopes',1,'19900527');
+insert into Jogador(id_equipa, nome, numero_camisola, data_nascimento) values (2,'ZéZé camarinha',2,'19980720');
+insert into Jogador(id_equipa, nome, numero_camisola, data_nascimento) values (2,'Raul iglesias',5,'20000501');
+insert into Jogador(id_equipa, nome, numero_camisola, data_nascimento) values (3,'Valter Gomes',9,'19980904');
+insert into Jogador(id_equipa, nome, numero_camisola, data_nascimento) values (3,'Alfredo Branco',11,'19980720');
+insert into Jogador(id_equipa, nome, numero_camisola, data_nascimento) values (3,'Ruben Santos',13,'20000501');
+
+--

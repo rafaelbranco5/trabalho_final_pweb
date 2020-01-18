@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="../css/styles.css">
+<link rel="shortcut icon" type="image/png" href="../images/favicon.ico"/>
 <link rel="stylesheet" type="text/css" href="../css/login.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
@@ -18,27 +19,25 @@
 					include '../php/carrousel.php';
 					break;
 				case 2: //TODO loja.php
-					include '';
+					include '../php/carrousel.php';
 					break;
 				case 3: //TODO equipas.php
-					include '';
+					include '../php/carrousel.php';
 					break;
 				case 4:	//TODO jogos.php
-					include '';
+					include '../php/carrousel.php';
 					break;
 				case 5:
 					include '../php/contactos.php';
 					break;
 				case 6: //TODO area_utilizador.php
-					include '';
+					include '../php/carrousel.php';
 				case 6:
 					include '../php/area_pessoal_utilizador.php';
 					break;
-				case 7: //WorkingON
+				case 7:
 					include '../php/aboutus.php';
 					break;
-				case 8: //TODO ? login
-					include '';
 				case 8:
 					include '../html/login_utilizador_existente.html';
 					break;

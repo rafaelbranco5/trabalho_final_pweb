@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="../css/styles.css">
+<link rel="shortcut icon" type="image/png" href="../images/favicon.ico"/>
 <div id="corpoprodutos">
     <?php
         $queryProdutos = mysqli_query("Ligação BD principal", "SELECT designacao, preco, imagen FROM ProdutosServicos WHERE tipo='Produto'");

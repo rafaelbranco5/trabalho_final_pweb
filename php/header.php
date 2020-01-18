@@ -1,5 +1,6 @@
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="../css/styles.css">
+<link rel="shortcut icon" type="image/png" href="../images/favicon.ico"/>
 <body>
 <div>
 	<div id="logo">
@@ -20,13 +21,14 @@
 					<?php }
 				?>
 				<li><a href="?page=7">Sobre Nós</a></li>
-				<li><a href="?page=8">Log In</a></li>
 				<?php
 					if (isset($_SESSION['user'])) { ?>
 						<li><a href="../php/logout.php">Log Out</a></li>
-			<?php	} else { ?>
+				<?php
+				} else {?>
 						<li><a href="?page=8">Log In</a></li>
-			<?php	} ?>
+				<?php
+				}?>
 			</ul>
 		</nav>
 	</div>

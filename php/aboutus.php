@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>About US!</title>
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.ico"/>
   </head>
   <body>
     <h3 class="titleaboutus">Sobre Nós</h3>
