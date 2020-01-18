@@ -95,3 +95,17 @@ ul li a{
 	text-align: right;
 	margin-right: 5px;
 }
+#map{
+	height: 400px;
+	width: 100%;
+}
+#titleaboutus{
+	font-size: 50px;
+	color: rgb(51,108,204);
+	text-align: center;
+}
+#aboutus{
+	font-size: 20px;
+	color: black;
+	text-align: center;
+}

@@ -34,8 +34,8 @@
 				case 6:
 					include '../php/area_pessoal_utilizador.php';
 					break;
-				case 7: //TODO aboutus.php
-					include '';
+				case 7: //WorkingON
+					include '../php/aboutus.php';
 					break;
 				case 8: //TODO ? login
 					include '';
