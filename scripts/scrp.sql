@@ -90,9 +90,10 @@ CREATE TABLE Users (
                 nome VARCHAR(254),
                 email VARCHAR(254),
                 password VARCHAR(254),
-                admin BIT DEFAULT 0
+                admin BIT DEFAULT 0,
+                treinador BIT DEFAULT 0
 );
 
 -insert user admin
 
-insert into Users (username,nome,email,password,admin) values('admin','Administrador','admin@admin.pt', SHA1('Administrador'),1)
+insert into Users (username,nome,email,password,admin,treinador) values('admin','Administrador','admin@admin.pt', SHA1('Administrador'),1,1)
