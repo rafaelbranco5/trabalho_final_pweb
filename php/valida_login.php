@@ -2,9 +2,9 @@
 	$login = $_POST['nome_utilizador'];
 	$pass = $_POST['password_login'];
 	include_once '../php/bdcon.php';
-	$veificautilizador = mysqli_query($liga, "SELECT `username`, admin, treinador FROM `Users` WHERE (username='".$login."' or email='".$login."') AND `password`=SHA1('".$pass."')");
-	if (mysqli_num_rows($veificaUtilizador) > 0){
-			while($rows=mysqli_fetch_assoc($veificautilizador)){
+	$vusr = mysqli_query($liga, "SELECT `username`, admin, treinador FROM `Users` WHERE (username='".$login."' or email='".$login."') AND `password`=SHA1('".$pass."')");
+	if ($vn=mysqli_num_rows($vusr) > 0){
+			while($rows=mysqli_fetch_assoc($vusr)){
 				session_start();
 				$_SESSION['user'] = $rows['username'];
 				$_SESSION['admin'] = $rows['admin'];
