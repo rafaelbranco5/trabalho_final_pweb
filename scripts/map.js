@@ -1,6 +1,8 @@
 function initMap() {
-  var locbena = {lat: 38.9804735, lng: -8.8093199};
-  var map = new google.maps.Map(
-  document.getElementById('map'), {zoom: 18, center: locbena});
-  var marker = new google.maps.Marker({position: locbena, map: map});
+  var camposol = {lat: 38.9765247, lng: -8.811222};
+  var mapsol = new google.maps.Map(document.getElementById('camposol'), {zoom: 18, center: camposol});
+  var markercampo = new google.maps.Marker({position: camposol, map: mapsol});
+  var campocam = {lat: 38.9789635, lng: -8.8352418};
+  var mapcam = new google.maps.Map(document.getElementById('campocam'), {zoom: 18, center: campocam});
+  var smarkercampo = new google.maps.Marker({position: campocam, map: mapcam});
 }
