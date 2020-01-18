@@ -29,27 +29,21 @@
 				case 5:
 					include '../php/contactos.php';
 					break;
-<<<<<<< HEAD
 				case 6: //TODO area_utilizador.php
 					include '';
-=======
-				case 6: 
+				case 6:
 					include '../php/area_pessoal_utilizador.php';
->>>>>>> master
 					break;
 				case 7: //TODO aboutus.php
 					include '';
 					break;
-<<<<<<< HEAD
 				case 8: //TODO ? login
 					include '';
-=======
 				case 8:
 					include '../html/login_utilizador_existente.html';
 					break;
 				case 9:
 					include '../html/login_novo_utilizador.html';
->>>>>>> master
 					break;
 				default:
 					include '../php/carrousel.php';
