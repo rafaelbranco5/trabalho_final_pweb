@@ -1,9 +1,12 @@
-<link rel="stylesheet" type="text/css" href="../css/styles.css">
-<link rel="shortcut icon" type="image/png" href="../images/favicon.ico"/>
-<link rel="stylesheet" type="text/css" href="../css/login.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
 
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	<link rel="shortcut icon" type="image/png" href="../images/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>GDB</title>
+</head>
 <div id="cabecalho">
 	<?php
 		include '../php/header.php';
@@ -34,8 +37,8 @@
 						}
 					}
 					break;
-				case 4:	//TODO jogos.php
-					include '../php/carrousel.php';
+				case 4:
+					include '../php/jogos.php';
 					break;
 				case 5:
 					include '../php/contactos.php';
@@ -51,6 +54,9 @@
 					break;
 				case 9:
 					include '../html/login_novo_utilizador.html';
+					break;
+				case 10:
+					include '../php/treinos.php';
 					break;
 				default:
 					include '../php/carrousel.php';

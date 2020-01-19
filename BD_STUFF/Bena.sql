@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 18-Jan-2020 às 20:15
+-- Tempo de geração: 19-Jan-2020 às 17:49
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.4.1
 
@@ -151,7 +151,9 @@ CREATE TABLE `Users` (
 --
 
 INSERT INTO `Users` (`id_user`, `username`, `nome`, `email`, `password`, `admin`, `treinador`) VALUES
-(1, 'admin', 'Administrador', 'admin@admin.pt', 'd033e22ae348aeb5660fc2140aec35850c4da997', b'1', b'1');
+(1, 'admin', 'Administrador', 'admin@admin.pt', 'd033e22ae348aeb5660fc2140aec35850c4da997', b'1', b'1'),
+(2, 'teste', 'teste', 'asdasd', 'f10e2821bbbea527ea02200352313bc059445190', b'1', b'1'),
+(3, 'vsantos', 'Valter', 'valtermontez@gmail.com', '2e6f9b0d5885b6010f9167787445617f553a735f', b'0', b'0');
 
 --
 -- Índices para tabelas despejadas
@@ -213,7 +215,7 @@ ALTER TABLE `Jogador`
 -- AUTO_INCREMENT de tabela `Users`
 --
 ALTER TABLE `Users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

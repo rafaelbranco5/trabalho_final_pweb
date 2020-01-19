@@ -6,8 +6,8 @@
   </head>
   <body>
       <h3 class="titulos">Equipas</h3>
-      <div id="equipas">
-        <div id="equipascor">
+      <div id="imgback">
+        <div id="imgbackcor">
           <?php
             include_once '../php/bdcon.php';
             $vteam = mysqli_query($liga, "SELECT * from Equipa");
