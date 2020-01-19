@@ -26,7 +26,7 @@
 					include '../php/carrousel.php';
 					break;
 				case 3: //TODO equipas.php
-					if(!isset($_SESSION['admin']) or !$_SESSION['treinador']){
+					if(!isset($_SESSION['admin']) or !isset($_SESSION['treinador'])){
 						include '../php/equipas.php';
 					}else {
 						if($_SESSION['admin']==true or $_SESSION['treinador']==true)
@@ -58,6 +58,9 @@
 				case 10:
 					include '../php/treinos.php';
 					break;
+				case 11:
+						include '../php/jogadortreino.php';
+						break;
 				default:
 					include '../php/carrousel.php';
 					break;

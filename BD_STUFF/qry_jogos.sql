@@ -26,3 +26,8 @@ left join Equipa el on j.id_local=el.id_equipa
 left join Equipa ev on j.id_visitante=ev.id_equipa
 where j.terminado=1
 order by j.data desc
+
+
+--treinos
+select t.data, t.local, t.duracao, e.nome, case when t.data <= CURDATE() then 'A decorrer' else 'Agendado' end as 'estado' from Treino t left join Equipa e on t.id_equipa=e.id_equipa where t.terminado=0 order by t.data asc
+select t.data, t.local, t.duracao, e.nome from Treino t left join Equipa e on t.id_equipa=e.id_equipa where t.terminado=1 order by t.data desc
