@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 19-Jan-2020 às 20:17
+-- Tempo de geração: 19-Jan-2020 às 23:56
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.4.1
 
@@ -122,13 +122,21 @@ INSERT INTO `Jogador` (`id_jogador`, `id_equipa`, `nome`, `n_golos_marcados`, `n
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `Jogador_Treino`
+-- Estrutura da tabela `Jogadores_Treino`
 --
 
-CREATE TABLE `Jogador_Treino` (
+CREATE TABLE `Jogadores_Treino` (
   `id_jogador` int(5) NOT NULL,
   `id_treino` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin7;
+
+--
+-- Extraindo dados da tabela `Jogadores_Treino`
+--
+
+INSERT INTO `Jogadores_Treino` (`id_jogador`, `id_treino`) VALUES
+(3, 2),
+(1, 2);
 
 -- --------------------------------------------------------
 
@@ -160,6 +168,30 @@ CREATE TABLE `Jogo` (
 INSERT INTO `Jogo` (`id_jogo`, `tipo_jogo`, `duracao`, `data`, `local`, `golos_equipa_local`, `golos_equipa_visitante`, `n_cartoes_amarelos_local`, `n_cartoes_amarelos_visitante`, `n_cartoes_vermelhos_visitante`, `n_cartoes_vermelhos_local`, `id_local`, `id_visitante`, `terminado`) VALUES
 (1, '11vs11', '90.00', '2020-01-19 00:00:00', 'Campo da Uniao', 1, 0, 0, 0, 0, 0, 2, 1, b'0'),
 (2, '11vs11', '90.00', '2020-01-25 00:00:00', 'Campo do cartaxo', 0, 0, 0, 0, 0, 0, 3, 2, b'0');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `Treino`
+--
+
+CREATE TABLE `Treino` (
+  `id_treino` int(5) NOT NULL,
+  `local` varchar(254) DEFAULT NULL,
+  `terminado` bit(1) NOT NULL DEFAULT b'0',
+  `data` datetime DEFAULT curdate(),
+  `id_equipa` int(5) NOT NULL,
+  `duracao` decimal(5,2) DEFAULT 60.00
+) ENGINE=InnoDB DEFAULT CHARSET=latin7;
+
+--
+-- Extraindo dados da tabela `Treino`
+--
+
+INSERT INTO `Treino` (`id_treino`, `local`, `terminado`, `data`, `id_equipa`, `duracao`) VALUES
+(1, 'Santarém', b'1', '2020-01-13 15:09:00', 2, '90.00'),
+(2, 'Benavente', b'0', '2020-01-19 00:00:00', 1, '60.00'),
+(3, 'Cartaxo', b'0', '2020-01-27 15:00:13', 3, '60.00');
 
 -- --------------------------------------------------------
 
@@ -215,16 +247,16 @@ ALTER TABLE `Jogador`
   ADD PRIMARY KEY (`id_jogador`);
 
 --
--- Índices para tabela `Jogador_Treino`
---
-ALTER TABLE `Jogador_Treino`
-  ADD PRIMARY KEY (`id_jogador`,`id_treino`);
-
---
 -- Índices para tabela `Jogo`
 --
 ALTER TABLE `Jogo`
   ADD PRIMARY KEY (`id_jogo`);
+
+--
+-- Índices para tabela `Treino`
+--
+ALTER TABLE `Treino`
+  ADD PRIMARY KEY (`id_treino`);
 
 --
 -- Índices para tabela `Users`
@@ -253,6 +285,12 @@ ALTER TABLE `Jogador`
 --
 ALTER TABLE `Jogo`
   MODIFY `id_jogo` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de tabela `Treino`
+--
+ALTER TABLE `Treino`
+  MODIFY `id_treino` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `Users`
