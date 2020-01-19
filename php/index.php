@@ -11,6 +11,7 @@
 </div>
 <div id="corpo">
 	<?php
+		include_once '../php/sessionstart.php';
 		if (!isset($_GET['page'])) {
 			include '../php/carrousel.php';
 		}else{
@@ -22,7 +23,12 @@
 					include '../php/carrousel.php';
 					break;
 				case 3: //TODO equipas.php
-					include '../php/carrousel.php';
+					if($_SESSION['admin']==1 or $_SESSION['Treinador']==1)
+					{
+						include '../php/equipasejogadores.php';
+					}else{
+						include '../php/equipas.php';
+					}
 					break;
 				case 4:	//TODO jogos.php
 					include '../php/carrousel.php';
@@ -30,8 +36,6 @@
 				case 5:
 					include '../php/contactos.php';
 					break;
-				case 6: //TODO area_utilizador.php
-					include '../php/carrousel.php';
 				case 6:
 					include '../php/area_pessoal_utilizador.php';
 					break;

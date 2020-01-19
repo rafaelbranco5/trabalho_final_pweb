@@ -106,18 +106,75 @@ ul li a{
 #camposol{
 	height: 400px;
 }
-.titleaboutus{
-	font-size: 30px;
-	color: rgb(51,108,204);
-	text-align: center;
-}
-.aboutus{
-	font-size: 20px;
-	color: black;
-	text-align: center;
-}
 .background{
 	background-image: url('../images/ffield.jpg');
 	background-position: center;
 	background-size: cover;
+}
+#teamlateral{
+	width: 15%;
+	height: 100%;
+	background-color: rgba(0,51,153,.9);
+	color: white;
+	float: left;
+}
+#jogadores{
+	width: 85%;
+	height: 100%;
+	float: left;
+	background-image: url('../images/ffield.jpg');
+	background-position: center;
+	background-size: cover;
+}
+#jogadorescor{
+		background-color:	rgb(220,220,220,.8);
+		width: 100%;
+		height: 100%;
+}
+.ejogadores{
+	float: left;
+	width: 32.33%;
+	height: 300px;
+	border-style: dashed;
+	border-width: 1px;
+	border-color: black;
+}
+#nomej{
+	color: black;
+	text-align: left;
+	font-size: 30px;
+	margin-left: 5px;
+}
+.infoj{
+	color: black;
+	text-align: left;
+	font-size: 15px;
+	margin-left: 5px;
+}
+.lequipa{
+	border-bottom-style: solid;
+	border-bottom-color: white;
+	border-bottom-width: 2px;
+	color: white;
+	font-size: 30px;
+}
+.lequipa a{
+	text-decoration: none;
+	color: white;
+}
+.titulos{
+	font-size: 30px;
+	color: rgb(51,108,204);
+	text-align: center;
+}
+.texto{
+	font-size: 20px;
+	color: black;
+	text-align: center;
+}
+.textocentro{
+	width:  inherit;
+	height: inherit;
+	vertical-align: middle;
+	text-align: center;
 }

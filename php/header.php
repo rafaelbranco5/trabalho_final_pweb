@@ -6,7 +6,9 @@
 	<div id="logo">
 		<img src="../images/gdb_75.png">
 	</div>
-
+	<?php
+		include_once '../php/sessionstart.php';
+	 ?>
 	<div id="menu">
 		<nav>
 			<ul>
@@ -25,7 +27,7 @@
 					if (isset($_SESSION['user'])) { ?>
 						<li><a href="../php/logout.php">Log Out</a></li>
 				<?php
-				} else {?>
+					} else {?>
 						<li><a href="?page=8">Log In</a></li>
 				<?php
 				}?>

@@ -5,11 +5,11 @@
 	$vusr = mysqli_query($liga, "SELECT `username`, admin, treinador FROM `Users` WHERE (username='".$login."' or email='".$login."') AND `password`=SHA1('".$pass."')");
 	if ($vn=mysqli_num_rows($vusr) > 0){
 			while($rows=mysqli_fetch_assoc($vusr)){
-				session_start();
+				include_once '../php/sessionstart.php';
 				$_SESSION['user'] = $rows['username'];
 				$_SESSION['admin'] = $rows['admin'];
 				$_SESSION['treinador'] = $rows['treinador'];
-				header('location: ../php/index.php');
+				header("Refresh:0; url=../php/index.php");
 			}
 	} else {
 		echo "<script>alert('Utilizador ou password errado.');

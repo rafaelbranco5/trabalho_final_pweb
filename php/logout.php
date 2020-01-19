@@ -1,4 +1,5 @@
 <?php
+    include_once '../php/sessionstart.php';
     session_destroy();
-    header('location: ../php/index.php');
+    header("Refresh:0; url=../php/index.php");
 ?>

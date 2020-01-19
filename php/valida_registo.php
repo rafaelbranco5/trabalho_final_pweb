@@ -11,8 +11,8 @@
         if ($passv1 == $passv2) {
             # Ligar a base de dados dos users
             mysqli_query($liga, "INSERT INTO `Users` (nome, `username`, `password`, email,admin,treinador) VALUES ('".$nome."','".$user."', sha1('".$passv1."'),'".$email."',0,0)");
-            header('location: ../php/index.php?page=8');
             echo "<script>alert('Registado!')</script>";
+            header('location: ../php/index.php?page=8');
         } else {
             echo "<script>alert('Ocorreu um erro ao tentar fazer o seu registo. Por favor reintroduza os seus dados.')</script>";
             header('location: ../php/index.php?page=9');
