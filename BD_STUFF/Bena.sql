@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 19-Jan-2020 às 19:26
+-- Tempo de geração: 19-Jan-2020 às 20:17
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.4.1
 
@@ -133,6 +133,37 @@ CREATE TABLE `Jogador_Treino` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `Jogo`
+--
+
+CREATE TABLE `Jogo` (
+  `id_jogo` int(5) NOT NULL,
+  `tipo_jogo` varchar(10) NOT NULL,
+  `duracao` decimal(5,2) NOT NULL,
+  `data` datetime NOT NULL DEFAULT curdate(),
+  `local` varchar(254) NOT NULL,
+  `golos_equipa_local` int(3) NOT NULL DEFAULT 0,
+  `golos_equipa_visitante` int(3) NOT NULL DEFAULT 0,
+  `n_cartoes_amarelos_local` int(3) NOT NULL DEFAULT 0,
+  `n_cartoes_amarelos_visitante` int(3) NOT NULL DEFAULT 0,
+  `n_cartoes_vermelhos_visitante` int(3) NOT NULL DEFAULT 0,
+  `n_cartoes_vermelhos_local` int(3) NOT NULL DEFAULT 0,
+  `id_local` int(5) NOT NULL DEFAULT 0,
+  `id_visitante` int(5) NOT NULL DEFAULT 0,
+  `terminado` bit(1) DEFAULT b'0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin7;
+
+--
+-- Extraindo dados da tabela `Jogo`
+--
+
+INSERT INTO `Jogo` (`id_jogo`, `tipo_jogo`, `duracao`, `data`, `local`, `golos_equipa_local`, `golos_equipa_visitante`, `n_cartoes_amarelos_local`, `n_cartoes_amarelos_visitante`, `n_cartoes_vermelhos_visitante`, `n_cartoes_vermelhos_local`, `id_local`, `id_visitante`, `terminado`) VALUES
+(1, '11vs11', '90.00', '2020-01-19 00:00:00', 'Campo da Uniao', 1, 0, 0, 0, 0, 0, 2, 1, b'0'),
+(2, '11vs11', '90.00', '2020-01-25 00:00:00', 'Campo do cartaxo', 0, 0, 0, 0, 0, 0, 3, 2, b'0');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `Users`
 --
 
@@ -190,6 +221,12 @@ ALTER TABLE `Jogador_Treino`
   ADD PRIMARY KEY (`id_jogador`,`id_treino`);
 
 --
+-- Índices para tabela `Jogo`
+--
+ALTER TABLE `Jogo`
+  ADD PRIMARY KEY (`id_jogo`);
+
+--
 -- Índices para tabela `Users`
 --
 ALTER TABLE `Users`
@@ -210,6 +247,12 @@ ALTER TABLE `Equipa`
 --
 ALTER TABLE `Jogador`
   MODIFY `id_jogador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT de tabela `Jogo`
+--
+ALTER TABLE `Jogo`
+  MODIFY `id_jogo` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `Users`
