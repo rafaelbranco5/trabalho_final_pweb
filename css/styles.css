@@ -154,14 +154,23 @@ ul li a{
 	border-width: 1px;
 	border-color: black;
 }
-#nomej{
+.nomej{
 	color: black;
 	text-align: left;
+	margin-top: 0;
+	margin-bottom: 5px;
 	font-size: 30px;
 	margin-left: 5px;
 }
 .infoj{
 	color: black;
+	text-align: left;
+	font-size: 15px;
+	margin-left: 5px;
+}
+.estado{
+	color: red;
+	font-weight: bold;
 	text-align: left;
 	font-size: 15px;
 	margin-left: 5px;
@@ -192,4 +201,31 @@ ul li a{
 	height: inherit;
 	vertical-align: middle;
 	text-align: center;
+}
+#titlejogos{
+	height: 50px;
+	width: 85%;
+	float: left;
+}
+#titlejogos a	{
+	height: 100%;
+	float: left;
+	width: 5%;
+}
+#titlejogos h2 {
+	height: 100%;
+	width: 15%;
+	text-align: left;
+	float: left;
+}
+#titletreinos{
+	height: 50px;
+	width: 15%;
+	float: right;
+}
+#titletreinos h2{
+	height: 100%;
+	float: right;
+	width: 100%;
+	text-align: left;
 }

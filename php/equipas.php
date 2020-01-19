@@ -14,7 +14,7 @@
             while($rowse=mysqli_fetch_assoc($vteam)){
               ?>
               <div class="ejogadores">
-                  <p id="nomej"><?php echo $rowse['nome']; ?></p>
+                  <p class="nomej"><?php echo $rowse['nome']; ?></p>
                   <p class="infoj">Golos Marcados: <?php echo $rowse['n_golos_marcados']; ?></p>
                   <p class="infoj">Golos Sofridos: <?php echo $rowse['n_golos_sofridos']; ?></p>
                   <p class="infoj">N.º Jogos: <?php echo $rowse['total_jogos']; ?></p>

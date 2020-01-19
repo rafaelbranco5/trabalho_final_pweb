@@ -32,7 +32,7 @@
                 while($rowsj=mysqli_fetch_assoc($vqj)){
                 ?>
                     <div class="ejogadores">
-                        <p id="nomej"><?php echo $rowsj['nome']; ?></p>
+                        <p class="nomej"><?php echo $rowsj['nome']; ?></p>
                         <p class="infoj">Golos: <?php echo $rowsj['n_golos_marcados']; ?></p>
                         <p class="infoj">Assistências: <?php echo $rowsj['n_assistencias']; ?></p>
                         <p class="infoj">N.º Jogos: <?php echo $rowsj['n_jogos']; ?></p>
