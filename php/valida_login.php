@@ -7,8 +7,16 @@
 			while($rows=mysqli_fetch_assoc($vusr)){
 				include_once '../php/sessionstart.php';
 				$_SESSION['user'] = $rows['username'];
-				$_SESSION['admin'] = $rows['admin'];
-				$_SESSION['treinador'] = $rows['treinador'];
+				if($rows['admin']==1){
+					$_SESSION['admin'] = true;
+				}else {
+					$_SESSION['admin'] = false;
+				}
+				if($rows['treinador']==1){
+					$_SESSION['treinador'] = true;
+				}else {
+					$_SESSION['treinador'] = false;
+				}
 				header("Refresh:0; url=../php/index.php");
 			}
 	} else {

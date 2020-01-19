@@ -23,11 +23,15 @@
 					include '../php/carrousel.php';
 					break;
 				case 3: //TODO equipas.php
-					if($_SESSION['admin']==1 or $_SESSION['Treinador']==1)
-					{
-						include '../php/equipasejogadores.php';
-					}else{
+					if(!isset($_SESSION['admin']) or !$_SESSION['treinador']){
 						include '../php/equipas.php';
+					}else {
+						if($_SESSION['admin']==true or $_SESSION['treinador']==true)
+						{
+							include '../php/equipasejogadores.php';
+						}else{
+							include '../php/equipas.php';
+						}
 					}
 					break;
 				case 4:	//TODO jogos.php
