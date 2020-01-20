@@ -59,10 +59,13 @@
 					include '../php/treinos.php';
 					break;
 				case 11:
-						include '../php/jogadortreino.php';
-						break;
+					include '../php/jogadortreino.php';
+					break;
 				case 12:
 					include '../php/addnewgame.php';
+					break;
+				case 13:
+					include '../php/actualizamarcador.php';
 					break;
 				default:
 					include '../php/carrousel.php';

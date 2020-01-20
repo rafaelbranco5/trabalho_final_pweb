@@ -20,12 +20,20 @@
     <div class="jpt">
       <?php
         include_once '../php/bdcon.php';
-        $qryjpt="select j.tipo_jogo, j.local, j.duracao, concat(el.nome,' vs. ',ev.nome) as `equipas`, concat(cast(j.golos_equipa_local as VARCHAR(3)),'-',cast(j.golos_equipa_visitante as VARCHAR(3))) as `resultado`, concat(cast(j.n_cartoes_amarelos_local as VARCHAR(3)),'-',cast(j.n_cartoes_amarelos_visitante as VARCHAR(3))) as `amarelos`, concat(cast(j.n_cartoes_vermelhos_local as VARCHAR(3)),'-',cast(j.n_cartoes_vermelhos_visitante as VARCHAR(3))) as `vermelhos`, case when j.data <= CURDATE() then 'A decorrer' else 'Agendado' end as 'estado' from Jogo j left join Equipa el on j.id_local=el.id_equipa left join Equipa ev on j.id_visitante=ev.id_equipa where j.terminado=0 order by j.data asc";
+        $qryjpt="select j.id_jogo, j.tipo_jogo, j.local, j.duracao, concat(el.nome,' vs. ',ev.nome) as `equipas`, concat(cast(j.golos_equipa_local as VARCHAR(3)),'-',cast(j.golos_equipa_visitante as VARCHAR(3))) as `resultado`, concat(cast(j.n_cartoes_amarelos_local as VARCHAR(3)),'-',cast(j.n_cartoes_amarelos_visitante as VARCHAR(3))) as `amarelos`, concat(cast(j.n_cartoes_vermelhos_local as VARCHAR(3)),'-',cast(j.n_cartoes_vermelhos_visitante as VARCHAR(3))) as `vermelhos`, case when j.data <= CURDATE() then 'A decorrer' else 'Agendado' end as 'estado' from Jogo j left join Equipa el on j.id_local=el.id_equipa left join Equipa ev on j.id_visitante=ev.id_equipa where j.terminado=0 order by j.data asc";
         $vjpt = mysqli_query($liga, $qryjpt);
         if(mysqli_num_rows($vjpt)>0){
           while($rowsjpt=mysqli_fetch_assoc($vjpt)){
             ?>
             <div class="ejogadores">
+                <?php
+                    include_once '../php/sessionstart.php';
+                    if (isset($_SESSION['admin']) && isset($_SESSION['treinador'])){
+                      if(($rowsjpt['estado']=='A decorrer') && ($_SESSION['admin']==true or $_SESSION['treinador']==true)){
+                      ?>  <a style="width:100%; height:20px;" href="?page=13&jogo=<?php echo $rowsjpt['id_jogo'];?>"> <img style="float: left; width: 20px; height: 20px;" src="../images/edit.png"></a>  <?php
+                      }
+                    }
+                ?>
                 <p class="estado"><?php echo $rowsjpt['estado']; ?></p>
                 <p class="nomej"><?php echo $rowsjpt['equipas']; ?></p>
                 <p class="nomej"> <?php echo $rowsjpt['resultado']; ?></p>
