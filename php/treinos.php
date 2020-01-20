@@ -4,7 +4,7 @@
     <h2 class="titulos">Treinos</h2>
   </div>
   <div id="titletreinos">
-      <h2 class="titulos"><a href="?page=4">Treinos</a></h2>
+      <h2 class="titulos"><a href="?page=4">Jogos</a></h2>
   </div>
 </div>
 <div id="imgback">
@@ -30,13 +30,14 @@
                 <p class="estado"><?php echo $rowsjpt['estado']; ?></p>
                 <p class="nomej"><?php echo $rowsjpt['nome']; ?></p>
                 <p class="nomej"> <?php echo $rowsjpt['data']; ?></p>
-                <p class="infoj">Duração: <?php echo $rowsjpt['duracao']; ?>M</p>
+                <p class="infoj">Duração: <?php echo $rowsjpt['duracao']; ?> M</p>
                 <p class="infoj"><?php echo $rowsjpt['local']; ?></p>
+                <!-- numero/percentagem de presenças no treino -->
             </div>
             <?php
           }
         }else {
-          ?> <p style="font-weight:bold; font-size: 25px; color: black;">Sem Jogos Agendados...</p> <?php
+          ?> <p style="font-weight:bold; font-size: 25px; color: black;">Sem Treinos Agendados...</p> <?php
         }
        ?>
   </div>
@@ -60,7 +61,7 @@
            <?php
          }
        }else {
-         ?> <p style="font-weight:bold; font-size: 25px; color: black;">Sem Jogos Terminados...</p> <?php
+         ?> <p style="font-weight:bold; font-size: 25px; color: black;">Sem Treinos Terminados...</p> <?php
        }
       ?>
   </div>

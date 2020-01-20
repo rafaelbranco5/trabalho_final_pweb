@@ -1,14 +1,21 @@
-<div style="width: 100%;height:50px;">
-  <div id="titlejogos">
-    <a href="../php/index.php?page=4"><img src="../images/refresh.png" style="width:35px;height:35px;"></a>
-    <h2 class="titulos">Jogos</h2>
-  </div>
-  <div id="titletreinos">
-      <h2 class="titulos"><a href="?page=10">Treinos</a></h2>
-  </div>
-</div>
+
 <div id="imgback">
   <div id="imgbackcor">
+    <div style="width: 100%;height:50px;">
+    <div id="titlejogos">
+      <a href="../php/index.php?page=4"><img src="../images/refresh.png" style="width:35px;height:35px;"></a>
+      <?php
+        include_once '../php/sessionstart.php';
+        if (isset($_SESSION['admin']) && isset($_SESSION['treinador'])){ ?>
+          <a href="../php/index.php?page=12"><img src="../images/add.jpg" style="width:35px;height:35px;"></a> <?php
+        } ?>
+      <h2 class="titulos">Jogos</h2>
+      
+    </div>
+    <div id="titletreinos">
+        <h2 class="titulos"><a href="?page=10">Treinos</a></h2>
+    </div>
+    </div>
     <h1 class="titulos">Jogos por Terminar</h1>
     <div class="jpt">
       <?php
@@ -33,6 +40,7 @@
           ?> <p style="font-weight:bold; font-size: 25px; color: black;">Sem Jogos Agendados...</p> <?php
         }
        ?>
+    </div>
   </div>
 </div>
 <div id="imgback">
@@ -67,5 +75,6 @@
          ?> <p style="font-weight:bold; font-size: 25px; color: black;">Sem Jogos Terminados...</p> <?php
        }
       ?>
+    </div>
   </div>
 </div>

@@ -204,7 +204,7 @@ ul li a{
 }
 #titlejogos{
 	height: 50px;
-	width: 85%;
+	width: 50%;
 	float: left;
 }
 #titlejogos a	{
@@ -214,18 +214,35 @@ ul li a{
 }
 #titlejogos h2 {
 	height: 100%;
-	width: 15%;
-	text-align: left;
+	width: 95%;
+	text-align: center;
 	float: left;
 }
 #titletreinos{
 	height: 50px;
-	width: 15%;
+	width: 50%;
 	float: right;
 }
 #titletreinos h2{
 	height: 100%;
 	float: right;
 	width: 100%;
-	text-align: left;
+	text-align: center;
+	margin-right: 10%;
+}
+#formAdicionaJogo{
+	height: 300px;
+}
+#escolhecasa{
+	float: left;
+	width: 25%;
+}
+#escolhefora{
+	float: left;
+	width: 25%;
+}
+#local{
+	margin-top: 10px;
+	float: left;
+	width: 25%;
 }

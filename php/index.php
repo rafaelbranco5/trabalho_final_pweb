@@ -61,6 +61,9 @@
 				case 11:
 						include '../php/jogadortreino.php';
 						break;
+				case 12:
+					include '../php/addnewgame.php';
+					break;
 				default:
 					include '../php/carrousel.php';
 					break;
