@@ -1,4 +1,5 @@
 <div>
+
   <h2 class="titulos">Regista Jogadores</h2>
 
   <form method="post" action="../php/valida_jogadortreino.php">
@@ -6,7 +7,7 @@
             include_once '../php/bdcon.php';
             $idtreino = $_GET['treino'];
             $idequipa = $_GET['equipa'];
-            
+
             $qryjogadores="select id_jogador,nome from Jogador where id_equipa=".$idequipa." and id_jogador not in (select id_jogador from Jogadores_Treino where id_treino=".$idtreino.")";
             $vnomeJogadores = mysqli_query($liga, $qryjogadores);
             if(mysqli_num_rows($vnomeJogadores)>0){
@@ -31,7 +32,7 @@
   <div id="imgback">
     <div id="imgbackcor">
       <?php
-        $jogadoresregistados = mysqli_query($liga, "Select * from Jogador where id_jogador in (select id_jogador from jogadores_treino where id_treino=".$idtreino.") ");
+        $jogadoresregistados = mysqli_query($liga, "Select * from Jogador where id_jogador in (select id_jogador from Jogadores_Treino where id_treino=".$idtreino.") ");
         while($rowsj=mysqli_fetch_assoc($jogadoresregistados)){
           ?>
           <div class="ejogadores">
@@ -51,8 +52,7 @@
           <?php
         }
        ?>
-       <a href="../php/index.php?page=10"><input type="submit" value="Confirmr"></a>
     </div>
   </div>
-
+  <a href="../php/index.php?page=10"><input type="submit" style="float: right; width: 100%;" value="Confirmar"></a>
 </div>

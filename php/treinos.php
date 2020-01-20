@@ -1,14 +1,11 @@
-<div style="width: 100%;height:50px;">
-  <div id="titlejogos">
-    <a href="../php/index.php?page=10"><img src="../images/refresh.png" style="width:35px;height:35px;"></a>
-    <h2 class="titulos">Treinos</h2>
-  </div>
-  <div id="titletreinos">
-      <h2 class="titulos"><a href="?page=4">Jogos</a></h2>
-  </div>
-</div>
+
 <div id="imgback">
   <div id="imgbackcor">
+    <div style="width: 100%;height:50px;">
+      <div id="titlejogos">
+          <h2 class="titulos"><a href="../php/index.php?page=10"><img src="../images/refresh.png" style="width:35px;height:35px;"></a><a href="?page=4" style="margin-left: 20px;">Jogos</a></h2>
+      </div>
+    </div>
     <h1 class="titulos">Treinos por Terminar</h1>
     <div class="jpt">
       <?php

@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="../css/styles.css">
 <?php
     include_once '../php/bdcon.php';
-    $querryequipas = mysqli_query($liga, "select id_equipa, nome from equipa");
+    $querryequipas = mysqli_query($liga, "select id_equipa, nome from Equipa");
 ?>
 <div id="formAdicionaJogo">
     <p class="titulos">Addicionar novo Jogo</p>
-    <form action="../php/validanovojogo.php">
+    <form action="../php/validanovojogo.php" method="post">
     <div id="escolhecasa">
         <p>Equipa da casa: </p>
         <select name="equipacasa">
@@ -19,7 +19,7 @@
         <p>Equipa de fora: </p>
         <select name="equipafora">
         <?php
-            $querryequipas2 = mysqli_query($liga, "select id_equipa, nome from equipa");
+            $querryequipas2 = mysqli_query($liga, "select id_equipa, nome from Equipa");
             while ($aux2 = mysqli_fetch_assoc($querryequipas2)) { ?>
             <option value="<?php echo $aux2['id_equipa']; ?>"><?php echo $aux2['nome']?></option>
     <?php   } ?>

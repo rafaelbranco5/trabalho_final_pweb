@@ -13,7 +13,6 @@
 		<nav>
 			<ul>
 				<li><a href="?page=1">Inicio</a></li>
-				<li><a href="?page=2">Loja</a></li>
 				<li><a href="?page=3">Equipas</a></li>
 				<li><a href="?page=4">Jogos</a></li>
 				<li><a href="?page=5">Contactos</a></li>
