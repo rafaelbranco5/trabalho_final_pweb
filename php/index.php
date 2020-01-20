@@ -22,10 +22,10 @@
 				case 1:
 					include '../php/carrousel.php';
 					break;
-				case 2: //TODO loja.php
-					include '../php/carrousel.php';
+				case 2:
+					include '../php/produtos.php';
 					break;
-				case 3: //TODO equipas.php
+				case 3:
 					if(!isset($_SESSION['admin']) or !isset($_SESSION['treinador'])){
 						include '../php/equipas.php';
 					}else {

@@ -9,7 +9,6 @@
         if (isset($_SESSION['admin']) && isset($_SESSION['treinador'])){ ?>
           <a href="../php/index.php?page=12"><img src="../images/add.jpg" style="width:35px;height:35px;"></a> <?php
         } ?>
-      <h2 class="titulos">Jogos</h2>
       
     </div>
     <div id="titletreinos">
